@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&display=swap');
+/*Yanone Kaffeesatz  font*/
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital@1&family=Open+Sans&display=swap');
+/*OpenSans Regular*/
+
+%flex{  /*шабллон*/
+    display: flex;
+    justify-content: center;
+}
+@mixin poz($top, $left){
+    position: absolute;
+    top: $top;
+    left: $left;
+}
+@mixin formBtn{
+    
+}
+$color-slider:#FFE2E2;
+$color-pink:#FFE2E2;
+/*colors standart   %name: rule;*/
+//@mixin fontz(){font-size:$fz }
+//@include fontz(100px)
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  body{
+    background: url('../../public/images/zerna.png') ;
+  }
+//header rules
+.static-container{
+    & ul{
+        width: 500px;
+        height: 100px;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+        li{
+            list-style-type: none;
+
+            a{
+                text-decoration: none;
+                color: black;
+
+                &:hover{
+                    cursor: pointer;
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+}
+.header-container{
+    @extend %flex;
+    margin-bottom: 200px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 20px;
+    width: 100%;
+    height: 1080px;
+    position: relative;
+    background: url('../../public/images/car.png') no-repeat;
+
+    &__logo{
+        width: 156px;
+        height: 127px;
+        position: absolute;
+        top: 60px;
+        left: 120px;
+
+          img{
+                 width: 100%;
+         }
+    }
+
+    &__icons{
+        width: 400px;
+        height: 100px;
+        position: absolute;
+        top: 40px;
+        right: 88px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        
+        & .elemIcons{
+            width: 20px;
+            height: 20px;
+            &:hover{
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        & img{
+            width: 100%;
+            
+        }
+    }
+
+    &__discr{
+        position: absolute;
+        top: 400px;
+        right: 143px;
+
+        p{
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.8;
+            font-size: 42px;
+            color: white;
+        }
+        button{
+            z-index: 2;
+            background: none;
+            color: white;
+            border: 1px solid white;
+            padding: 10px;
+            border-radius: 10px;
+
+            &:hover{
+                border:3px solid white;
+                padding: 12px;
+            }
+        }
+    }
+    .login-btn{
+        position: absolute;
+        top: 76px;
+        right: 79px;
+            button{
+                padding: 5px;
+                border-radius: 5px;
+                    a{
+                        text-decoration: none;
+                        color: black;
+                    }
+            }
+    }
+}
+//Slider rules
+.slider-container{
+  @extend %flex;
+  align-items: center;
+  max-width: 80%;
+  margin: auto;
+  height: 660px;
+  background: $color-slider;
+  margin-bottom: 200px;
+
+    &__track{
+        width: 1320px;
+        height: 540px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+            div{
+                width: 180px;
+                height: 400px;
+                opacity: 0.5;
+                    &:nth-child(3){
+                        width: 300px;
+                        height: 540px;
+                        opacity: 1;
+                    }
+                    &:nth-child(2){
+                        width: 210px;
+                        height: 448px;
+                        opacity: 0.5;
+                    }
+                    &:nth-child(2){
+                        width: 210px;
+                        height: 448px;
+                        opacity: 0.5;
+                    }
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+            }
+    }
+}
+//Discr rule
+.discr-container{
+    position: relative;
+    height: 1300px;
+    .discr__page1{
+        z-index: 22;
+        width: 1380px;
+        height: 560px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        .page1__img{
+            width: 675px;
+            height: 100%;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+        }
+        .page1__text{
+            flex-wrap: wrap;
+            display: flex;
+            text-align: center;
+            width: 675px;
+            height: 100%;
+                h2{
+                    display: flex;
+                    align-items: center;
+                }
+        }
+    }
+
+    .discr__page2{
+        z-index: 1;
+        width: 1380px;
+        height: 560px;
+        position: absolute;
+        left: 200px;
+        top: 543px;
+        @extend %flex;
+        align-items: center;
+        margin: auto;
+            .page2__text{
+                flex-wrap: wrap;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                width: 675px;
+                height: 100%;
+                    h2{
+                        display: flex;
+                        align-items: center;
+                    }
+            }
+            .page2__img{
+                width: 675px;
+                height: 100%;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+            }
+    }
+}
+//second slider rules
+.second-sliderContainer{
+    width: 1676px;
+    height: 620px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+        .container__btn-L{
+            border: 2px solid black;
+            padding: 5px;
+            position: absolute;
+            bottom: 30px;
+            left: 50px;
+        }
+        .container__btn-R{
+            border: 2px solid black;
+            padding: 5px;
+            position: absolute;
+            bottom: 30px;
+            right: 50px;
+        }
+}
+//footer rules
+.footer-container{
+    width: 100%;
+    height: 550px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+        ul li{
+            padding-top: 5px;
+        }
+        &__social{
+            display: flex;
+            div{
+                margin-left: 20px;
+            }
+        }
+}
+
+//zagolovok footer
+.fooh2{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 20px;
+    text-align: center;
+  }
+//Login rules
+  .login-container{
+      display: flex;
+      font-family: 'Poiret One', cursive;
+      width: 100%;
+      height: 1080px;
+      z-index: 31;
+        .login-text{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 640px;
+            height: 100%;
+            background: $color-pink;
+            & p{
+                text-align: center;
+            }
+            & h1{
+                text-align: center;
+            }
+        }
+        .login-forma{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+               .login-forma__center{
+                position: relative;
+                width: 564px;
+                height: 405px;
+                    .btn-entry{
+                        @include poz(10px, 10px);
+                    }
+                    .btn-registration{
+                        @include poz(10px, 85px);
+                    }
+                    .form-reg{
+                        @include poz(120px, 10px);
+                            .reg__name{
+                                @include poz(0px, 0px);
+                            }
+                            .reg__surname{
+                                @include poz(0px, 300px);
+                            }
+                            .reg__pass{
+                                @include poz(60px, 0px);
+                            }
+                            .reg__mail{
+                                @include poz(120px, 0px);
+                            }
+                            .reg__sub{
+                                @include poz(185px, 0px);
+                            }
+                    }
+               }
+               .center__regGoogle{
+                @include poz(338px, 10px);
+               }
+               .center__reg{
+                @include poz(365px, 10px);
+               }
+               .center__checkbox{
+                @include poz(392px, 10px);
+               }
+        }
+    }

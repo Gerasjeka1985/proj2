@@ -1,0 +1,277 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: #e3e3e3;
+  background: url('../../public/images/zerna.png');
+}
+
+.header-container{
+  margin-bottom: 200px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 20px;
+  min-width: 100%;
+  height: 1080px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  background: url('../../public/images/car.png');
+}
+
+.header-container__logo{
+  width: 156px;
+  height: 127px;
+  position: absolute;
+  top: 60px;
+  left: 120px;
+}
+
+.header-container__logo img{
+  width: 100%;
+}
+
+.header-container  ul {
+  width: 500px;
+  display: flex;
+  height: 100px;
+  justify-content: space-around;
+  align-items: end;
+}
+
+.header-container  ul li{
+  list-style-type: none;
+}
+
+.header-container  ul li a{
+  text-decoration: none;
+  color: black;
+} 
+.header-container  ul li a:hover{
+  cursor: pointer;
+  color: #e3e3e3;
+  background: black;
+}
+
+.header-container__discr{
+  position: absolute;
+  top: 400px;
+  right: 143px;
+}
+
+.header-container__discr p{
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.8;
+  font-size: 42px;
+  color: white;
+}
+
+.header-container__discr button{
+  z-index: 2;
+  background: none;
+  color: white;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.header-container__icons{
+  display: flex;
+  width: 400px;
+  position: absolute;
+  height: 100px;
+  top: 40px;
+  right: 88px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+
+
+
+.slider-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80%;
+  margin: auto;
+  height: 660px;
+  background: #FFE2E2;
+  margin-bottom: 200px;
+}
+
+.slider-container__track{
+  width: 1320px;
+  height: 540px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.slider-container__track div{
+  width: 180px;
+  height: 400px;
+  opacity: 0.5;
+}
+
+.slider-container__track div:nth-child(3){
+  width: 300px;
+  height: 540px;
+  opacity: 1;
+}
+
+.slider-container__track div:nth-child(2){
+  width: 210px;
+  height: 448px;
+  opacity: 0.5;
+}
+
+
+.slider-container__track div:nth-child(4){
+  width: 210px;
+  height: 448px;
+  opacity: 0.5;
+}
+
+.slider-container__track div img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+.discr-container{
+  position: relative;
+  height: 1300px;
+}
+
+.discr__page1{
+  z-index: 22;
+  width: 1380px;
+  height: 560px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.page1__img{
+  width: 675px;
+  height: 100%;
+}
+
+.page1__img img{
+  width: 100%;
+  height: 100%;
+}
+
+
+.page1__text h2{
+  display: flex;
+  align-items: center;
+}
+.page1__text{
+  flex-wrap: wrap;
+  display: flex;
+  text-align: center;
+  width: 675px;
+  height: 100%;
+}
+.page2{
+  z-index: 1;
+  position: absolute;
+  width: 1380px;
+  height: 560px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  left: 200px;
+  top: 543px;
+}
+.page2__text{
+  flex-wrap: wrap;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 675px;
+  height: 100%;
+}
+
+.page2__text h2{
+  display: flex;
+  align-items: center;
+}
+.page2__img{
+  width: 675px;
+  height: 100%;
+}
+
+.page2__img img{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+.container{
+  width: 1676px;
+  height: 620px;
+  margin: auto;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  
+}
+
+.container__btn-R{
+  border: 2px solid black;
+  padding: 5px;
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+}
+
+.container__btn-L{
+  border: 2px solid black;
+  padding: 5px;
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+}
+
+.footer-container{
+  width: 100%;
+  height: 550px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+
+
+.footer-container ul li{
+  padding-top: 5px;
+}
+
+.fooh2{
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 20px;
+  text-align: center;
+}
+
+.footer-container__social{
+  display: flex;
+}
+
+.footer-container__social div{
+  margin-left: 20px;
+}
